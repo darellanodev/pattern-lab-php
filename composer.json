@@ -1,0 +1,19 @@
+{
+    "name": "user/pattern-lab-php",
+    "description": "Experimenting with design patterns in PHP",
+    "type": "project",
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        }
+    },
+    " authors": [
+        {
+            "name": "User"
+        }
+    ],
+    "minimum-stability": "stable"
+}
