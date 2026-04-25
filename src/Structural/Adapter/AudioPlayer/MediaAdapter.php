@@ -15,12 +15,13 @@ class MediaAdapter implements MediaPlayer
         }
     }
 
-    public function play(string $audioType, string $filename): void
+    public function play(string $audioType, string $filename): string
     {
         if ($audioType === 'mp4') {
-            $this->advancedPlayer->playMp4($filename);
+            return $this->advancedPlayer->playMp4($filename);
         } elseif ($audioType === 'vlc') {
-            $this->advancedPlayer->playVlc($filename);
+            return $this->advancedPlayer->playVlc($filename);
         }
+        return '';
     }
 }

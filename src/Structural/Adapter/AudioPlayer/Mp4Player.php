@@ -4,12 +4,13 @@ namespace App\Structural\Adapter\AudioPlayer;
 
 class Mp4Player implements AdvancedMediaPlayer
 {
-    public function playMp4(string $filename): void
+    public function playMp4(string $filename): string
     {
-        echo "Playing MP4 file: {$filename}" . PHP_EOL;
+        return "Playing MP4 file: {$filename}";
     }
 
-    public function playVlc(string $filename): void
+    public function playVlc(string $filename): string
     {
+        return '';
     }
 }

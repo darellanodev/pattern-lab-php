@@ -6,15 +6,15 @@ class AudioPlayer implements MediaPlayer
 {
     private MediaAdapter $adapter;
 
-    public function play(string $audioType, string $filename): void
+    public function play(string $audioType, string $filename): string
     {
         if (in_array($audioType, ['mp3', 'wav'])) {
-            echo "Playing MP3/WAV file: {$filename}" . PHP_EOL;
+            return "Playing MP3/WAV file: {$filename}";
         } elseif (in_array($audioType, ['mp4', 'vlc'])) {
             $this->adapter = new MediaAdapter($audioType);
-            $this->adapter->play($audioType, $filename);
+            return $this->adapter->play($audioType, $filename);
         } else {
-            echo "Unsupported audio type: {$audioType}" . PHP_EOL;
+            return "Unsupported audio type: {$audioType}";
         }
     }
 }
