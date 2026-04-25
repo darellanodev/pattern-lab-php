@@ -36,6 +36,19 @@ $output[] = $audioPlayer->play('avi', 'movie.avi');
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-3xl font-bold text-center text-white mb-2">Audio Player Example</h1>
         <p class="text-center text-gray-400 mb-8">Adapter Pattern Demo</p>
+
+        <div class="max-w-2xl mx-auto mb-8">
+            <div class="bg-gray-800 rounded-lg p-6">
+                <p class="text-gray-300 mb-4"><strong class="text-white">The problem:</strong> Your player knows only MP3 and WAV. But you want to play MP4 and VLC too.</p>
+                <p class="text-gray-300 mb-4">The other code plays MP4 and VLC. But your player can't use it.</p>
+                <p class="text-gray-300 mb-4">Why? Because they speak different "languages".</p>
+                <p class="text-gray-300 mb-4"><strong class="text-white">The solution:</strong> Put something in the middle. It translates between them.</p>
+                <p class="text-gray-300 mb-4">Now they understand each other. Your player plays all formats!</p>
+                <p class="text-gray-400 text-sm border-t border-gray-700 pt-4 mt-4"><strong class="text-white">AudioPlayer</strong> = your player</p>
+                <p class="text-gray-400 text-sm"><strong class="text-white">Mp4Player / VlcPlayer</strong> = other code</p>
+                <p class="text-gray-400 text-sm"><strong class="text-white">MediaAdapter</strong> = translator in the middle</p>
+            </div>
+        </div>
         
         <div class="max-w-2xl mx-auto">
             <pre class="bg-gray-800 text-green-400 p-6 rounded-lg shadow-md overflow-x-auto font-mono text-sm"><?php echo implode("\n", $output); ?></pre>
