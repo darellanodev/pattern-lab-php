@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../../../../vendor/autoload.php';
 
-use Src\Structural\Adapter\AudioPlayer\AudioPlayer;
+use App\Structural\Adapter\AudioPlayer\AudioPlayer;
 
 $audioPlayer = new AudioPlayer();
 

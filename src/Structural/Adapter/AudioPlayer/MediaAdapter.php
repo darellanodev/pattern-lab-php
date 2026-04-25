@@ -1,6 +1,6 @@
 <?php
 
-namespace Src\Structural\Adapter\AudioPlayer;
+namespace App\Structural\Adapter\AudioPlayer;
 
 class MediaAdapter implements MediaPlayer
 {
