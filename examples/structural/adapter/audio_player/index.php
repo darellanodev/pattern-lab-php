@@ -6,19 +6,46 @@ use App\Structural\Adapter\AudioPlayer\AudioPlayer;
 
 $audioPlayer = new AudioPlayer();
 
-echo "=== Audio Player Demo ===" . PHP_EOL . PHP_EOL;
-
-echo "Playing MP3:" . PHP_EOL;
-$audioPlayer->play('mp3', 'song.mp3');
-
-echo PHP_EOL . "Playing MP4:" . PHP_EOL;
-$audioPlayer->play('mp4', 'movie.mp4');
-
-echo PHP_EOL . "Playing VLC:" . PHP_EOL;
-$audioPlayer->play('vlc', 'video.vlc');
-
-echo PHP_EOL . "Playing WAV:" . PHP_EOL;
-$audioPlayer->play('wav', 'audio.wav');
-
-echo PHP_EOL . "Unsupported format:" . PHP_EOL;
-$audioPlayer->play('avi', 'movie.avi');
+$output = [];
+$output[] = "=== Audio Player Demo ===";
+$output[] = "";
+$output[] = "Playing MP3:";
+$output[] = $audioPlayer->play('mp3', 'song.mp3');
+$output[] = "";
+$output[] = "Playing MP4:";
+$output[] = $audioPlayer->play('mp4', 'movie.mp4');
+$output[] = "";
+$output[] = "Playing VLC:";
+$output[] = $audioPlayer->play('vlc', 'video.vlc');
+$output[] = "";
+$output[] = "Playing WAV:";
+$output[] = $audioPlayer->play('wav', 'audio.wav');
+$output[] = "";
+$output[] = "Unsupported format:";
+$output[] = $audioPlayer->play('avi', 'movie.avi');
+?>
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player Example</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="dark:bg-gray-900 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center text-white mb-2">Audio Player Example</h1>
+        <p class="text-center text-gray-400 mb-8">Adapter Pattern Demo</p>
+        
+        <div class="max-w-2xl mx-auto">
+            <pre class="bg-gray-800 text-green-400 p-6 rounded-lg shadow-md overflow-x-auto font-mono text-sm"><?php echo implode("\n", $output); ?></pre>
+            
+            <div class="mt-8 text-center">
+                <a href="../../../../index.php" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded transition">
+                    Back to Patterns
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
