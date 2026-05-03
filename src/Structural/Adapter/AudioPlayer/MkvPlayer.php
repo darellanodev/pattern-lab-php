@@ -2,13 +2,8 @@
 
 namespace App\Structural\Adapter\AudioPlayer;
 
-class MkvPlayer implements AdvancedMediaPlayer
+class MkvPlayer implements MkvPlayerInterface
 {
-    public function playMp4(string $filename): string
-    {
-        return '';
-    }
-
     public function playMkv(string $filename): string
     {
         return "Playing MKV file: {$filename}";

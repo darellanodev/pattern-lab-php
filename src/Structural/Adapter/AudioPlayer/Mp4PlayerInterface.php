@@ -2,8 +2,7 @@
 
 namespace App\Structural\Adapter\AudioPlayer;
 
-interface AdvancedMediaPlayer
+interface Mp4PlayerInterface
 {
     public function playMp4(string $filename): string;
-    public function playMkv(string $filename): string;
 }

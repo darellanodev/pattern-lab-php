@@ -4,7 +4,7 @@ namespace App\Structural\Adapter\AudioPlayer;
 
 class MediaAdapter implements MediaPlayer
 {
-    private AdvancedMediaPlayer $advancedPlayer;
+    private Mp4PlayerInterface|MkvPlayerInterface $advancedPlayer;
 
     public function __construct(string $audioType)
     {
@@ -17,9 +17,9 @@ class MediaAdapter implements MediaPlayer
 
     public function play(string $audioType, string $filename): string
     {
-        if ($audioType === 'mp4') {
+        if ($audioType === 'mp4' && $this->advancedPlayer instanceof Mp4PlayerInterface) {
             return $this->advancedPlayer->playMp4($filename);
-        } elseif ($audioType === 'mkv') {
+        } elseif ($audioType === 'mkv' && $this->advancedPlayer instanceof MkvPlayerInterface) {
             return $this->advancedPlayer->playMkv($filename);
         }
         return '';
