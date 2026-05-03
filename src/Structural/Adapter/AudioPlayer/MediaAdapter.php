@@ -10,8 +10,8 @@ class MediaAdapter implements MediaPlayer
     {
         if ($audioType === 'mp4') {
             $this->advancedPlayer = new Mp4Player();
-        } elseif ($audioType === 'vlc') {
-            $this->advancedPlayer = new VlcPlayer();
+        } elseif ($audioType === 'mkv') {
+            $this->advancedPlayer = new MkvPlayer();
         }
     }
 
@@ -19,8 +19,8 @@ class MediaAdapter implements MediaPlayer
     {
         if ($audioType === 'mp4') {
             return $this->advancedPlayer->playMp4($filename);
-        } elseif ($audioType === 'vlc') {
-            return $this->advancedPlayer->playVlc($filename);
+        } elseif ($audioType === 'mkv') {
+            return $this->advancedPlayer->playMkv($filename);
         }
         return '';
     }

@@ -2,15 +2,15 @@
 
 namespace App\Structural\Adapter\AudioPlayer;
 
-class VlcPlayer implements AdvancedMediaPlayer
+class MkvPlayer implements AdvancedMediaPlayer
 {
     public function playMp4(string $filename): string
     {
         return '';
     }
 
-    public function playVlc(string $filename): string
+    public function playMkv(string $filename): string
     {
-        return "Playing VLC file: {$filename}";
+        return "Playing MKV file: {$filename}";
     }
 }

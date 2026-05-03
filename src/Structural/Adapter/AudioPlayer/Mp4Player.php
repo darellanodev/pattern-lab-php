@@ -9,7 +9,7 @@ class Mp4Player implements AdvancedMediaPlayer
         return "Playing MP4 file: {$filename}";
     }
 
-    public function playVlc(string $filename): string
+    public function playMkv(string $filename): string
     {
         return '';
     }

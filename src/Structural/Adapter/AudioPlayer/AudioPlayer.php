@@ -10,7 +10,7 @@ class AudioPlayer implements MediaPlayer
     {
         if (in_array($audioType, ['mp3', 'wav'])) {
             return "Playing MP3/WAV file: {$filename}";
-        } elseif (in_array($audioType, ['mp4', 'vlc'])) {
+        } elseif (in_array($audioType, ['mp4', 'mkv'])) {
             $this->adapter = new MediaAdapter($audioType);
             return $this->adapter->play($audioType, $filename);
         } else {
