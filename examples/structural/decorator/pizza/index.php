@@ -31,7 +31,9 @@ $output[] = $pizza->getCost();
 
         <div class="max-w-2xl mx-auto mb-8">
             <div class="bg-gray-800 rounded-lg p-6">
-                <p class="text-gray-300 mb-4"></p><p class="text-gray-300"></p>
+                <p class="text-gray-300 mb-4">
+                We have a basic <strong>SimplePizza</strong> that gives us a description and a price.</p><p class="text-gray-300">Now we want to add extras like <strong>cheese</strong> or <strong>ham</strong> without changing the original pizza class. We create <strong>decorators</strong> that wrap the pizza and add their own extras on top. This way we can combine any toppings we want.
+                </p>
             </div>
         </div>
         
