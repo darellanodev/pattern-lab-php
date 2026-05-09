@@ -24,6 +24,17 @@
                     </a>
                 </div>
             </div>
+
+            <div class="bg-gray-800 rounded-lg shadow-md overflow-hidden mt-4">
+                <div class="p-6">
+                    <h3 class="text-xl font-medium text-white mb-2">Decorator</h3>
+                    <p class="text-gray-400 mb-2">Adds extra features to objects while keeping the original code unchanged. Like putting toppings on a pizza: you still have a pizza, but with more things on it.</p>
+                    <p class="text-gray-500 text-sm mb-4">Use case: adding features to classes without changing their structure, extending functionality.</p>
+                    <a href="examples/structural/decorator/pizza/index.php" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded transition">
+                        View Example
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </body>
