@@ -1,3 +1,10 @@
+<?php
+
+require_once __DIR__.'/vendor/autoload.php';
+
+use App\Helpers\PatternCard;
+
+?>
 <!DOCTYPE html>
 <html lang="en" class="dark">
 
@@ -16,39 +23,28 @@
         <div class="max-w-2xl mx-auto">
             <h2 class="text-2xl font-semibold text-gray-200 mb-6">Structural Patterns</h2>
 
-            <div class="bg-gray-800 rounded-lg shadow-md overflow-hidden">
-                <div class="p-6">
-                    <h3 class="text-xl font-medium text-white mb-2">Adapter</h3>
-                    <p class="text-gray-400 mb-2">Lets things work even if they are different. Like a plug adapter when you travel: your charger works the same, only the shape changes.</p>
-                    <p class="text-gray-500 text-sm mb-4">Use case: integrating old APIs, legacy systems, or third-party libraries.</p>
-                    <a href="examples/structural/adapter/audio_player/index.php" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded transition">
-                        View Example
-                    </a>
-                </div>
-            </div>
+            <?php PatternCard::render(
+                'Adapter',
+                'Lets things work even if they are different. Like a plug adapter when you travel: your charger works the same, only the shape changes.',
+                'integrating old APIs, legacy systems, or third-party libraries.',
+                'examples/structural/adapter/audio_player/index.php'
+            ); ?>
 
-            <div class="bg-gray-800 rounded-lg shadow-md overflow-hidden mt-4">
-                <div class="p-6">
-                    <h3 class="text-xl font-medium text-white mb-2">Decorator</h3>
-                    <p class="text-gray-400 mb-2">Adds extra features to objects while keeping the original code unchanged. Like putting toppings on a pizza: you still have a pizza, but with more things on it.</p>
-                    <p class="text-gray-500 text-sm mb-4">Use case: adding features to classes without changing their structure, extending functionality.</p>
-                    <a href="examples/structural/decorator/pizza/index.php" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded transition">
-                        View Example
-                    </a>
-                </div>
-            </div>
+            <?php PatternCard::render(
+                'Decorator',
+                'Adds extra features to objects while keeping the original code unchanged. Like putting toppings on a pizza: you still have a pizza, but with more things on it.',
+                'adding features to classes without changing their structure, extending functionality.',
+                'examples/structural/decorator/pizza/index.php',
+                'mt-4'
+            ); ?>
 
-            <div class="bg-gray-800 rounded-lg shadow-md overflow-hidden mt-4">
-                <div class="p-6">
-                    <h3 class="text-xl font-medium text-white mb-2">Bridge</h3>
-                    <p class="text-gray-400 mb-2">Separates the type of message from the way it is sent. You can send an alert by email, a reminder by SMS, or a welcome by push — the message type and the delivery channel can change independently.</p>
-                    <p class="text-gray-500 text-sm mb-4">Use case: when you have different types of notifications and different delivery channels, and you want to combine them freely.</p>
-                    <a href="examples/structural/bridge/notificator/index.php" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded transition">
-                        View Example
-                    </a>
-                </div>
-            </div>
-
+            <?php PatternCard::render(
+                'Bridge',
+                'Separates the type of message from the way it is sent. You can send an alert by email, a reminder by SMS, or a welcome by push — the message type and the delivery channel can change independently.',
+                'when you have different types of notifications and different delivery channels, and you want to combine them freely.',
+                'examples/structural/bridge/notificator/index.php',
+                'mt-4'
+            ); ?>
         </div>
     </div>
 </body>
