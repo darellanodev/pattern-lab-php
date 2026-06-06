@@ -10,10 +10,18 @@
             "App\\": "src/"
         }
     },
-    " authors": [
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
         {
             "name": "User"
         }
     ],
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpunit/phpunit": "^10"
+    }
 }
