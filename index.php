@@ -39,6 +39,14 @@ use App\Helpers\PatternCard;
             ); ?>
 
             <?php PatternCard::render(
+                'Composite',
+                'Lets you treat individual objects and groups of objects the same way. A folder with files is still a "thing you can open" — just like a single file.',
+                'tree structures, file systems, menus, or any hierarchy where leaves and containers must be treated uniformly.',
+                'examples/structural/composite/filesystem/index.php',
+                'mt-4'
+            ); ?>
+
+            <?php PatternCard::render(
                 'Bridge',
                 'Separates the type of message from the way it is sent. You can send an alert by email, a reminder by SMS, or a welcome by push — the message type and the delivery channel can change independently.',
                 'when you have different types of notifications and different delivery channels, and you want to combine them freely.',
