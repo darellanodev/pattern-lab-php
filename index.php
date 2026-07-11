@@ -53,6 +53,14 @@ use App\Helpers\PatternCard;
                 'examples/structural/bridge/notificator/index.php',
                 'mt-4'
             ); ?>
+
+            <?php PatternCard::render(
+                'Facade',
+                'Provides a simple interface to a complex system of classes. Like a hotel concierge: you ask one person for everything, instead of calling housekeeping, room service, and the front desk separately.',
+                'simplifying interactions with complex subsystems, providing a unified API.',
+                'examples/structural/facade/movie_player/index.php',
+                'mt-4'
+            ); ?>
         </div>
     </div>
 </body>
