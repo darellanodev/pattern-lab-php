@@ -1,0 +1,12 @@
+{
+  "languages": {
+    "PHP": {
+      "language_servers": ["intelephense", "phpcs", "!phpactor"],
+      "code_actions_on_format": {
+        "source.fixAll.phpcs": true,
+      },
+      "formatter": [],
+      "format_on_save": "on",
+    },
+  },
+}

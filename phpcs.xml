@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<ruleset name="Mi estándar">
+    <description
+    >PSR-12 + comillas simples cuando no hay interpolación</description>
+
+    <rule ref="PSR12" />
+
+    <rule ref="Squiz.Strings.DoubleQuoteUsage">
+        <exclude name="Squiz.Strings.DoubleQuoteUsage.ContainsVar" />
+    </rule>
+</ruleset>
